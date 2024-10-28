@@ -1,0 +1,30 @@
+
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.selection{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.selection > div{
+    padding-top: 20px;
+}
+
+#button {
+    width: 150px;
+    height: 50px;
+    transition: 500ms;
+}
+
+#button:hover{
+    width: 200px;
+    height: 70px;
+    background-color: grey;
+}

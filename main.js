@@ -11,4 +11,9 @@ function getComputerChoice(){
     return choice;
 }
 
+function getHumanChoice(button){
+    console.log(button.id);
+}
+
+
 console.log(getComputerChoice());

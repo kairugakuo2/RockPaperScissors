@@ -15,22 +15,37 @@ function getHumanChoice(button){
     return button.id;
 }
 
-
 function playRound(button){
     console.clear();
     let computerSelection = getComputerChoice();
     let humanSelection = getHumanChoice(button);
     const result = whoIsWinner(computerSelection, humanSelection);
 
-    console.log(`Computer chose: ${computerSelection}`);
-    console.log(`You chose: ${humanSelection}`);
+
+
     if (result ==="tie") {
-        console.log("Result: It was a tie!");
+        alert(`Computer chose: ${computerSelection}
+              Human chose: ${humanSelection}
+              Result: It was a tie!
+              ${getScore(result)}`);
     } else {
-        console.log(`Result: ${result} is the winner!`);
+        alert(`Computer chose: ${computerSelection}
+                Human chose: ${humanSelection}
+                Result: The ${result} is the winner!
+                ${getScore(result)}`);
     }
 
     return result;
+}
+let computerScore = 0;
+let humanScore = 0;
+function getScore(result){
+    if (result === "Computer"){
+        computerScore += 1;
+    } else if (result === "Human"){
+        humanScore +=1;
+    }
+    return `Score: C = ${computerScore}, H = ${humanScore}`;
 }
 
 function whoIsWinner(computerSelection, humanSelection){
